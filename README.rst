@@ -11,3 +11,7 @@ build::
 run::
 
    $ sudo docker run --rm -it --network=host phygi_task
+
+::api/meta 
+
+   $ localhost:8000/api/meta
