@@ -10,4 +10,4 @@ build::
 
 run::
 
-   $ udo docker run --rm -it --network=host phygi_task
+   $ sudo docker run --rm -it --network=host phygi_task
