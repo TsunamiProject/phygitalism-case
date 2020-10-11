@@ -1,0 +1,1 @@
+root_directory = "/home/tsproj/Projects/phygi_task/django_microservice/file_microservice/"
