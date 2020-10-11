@@ -42,3 +42,6 @@ def dir_files(request):
         return JsonResponse(file_dict, json_dumps_params={'ensure_ascii': False})
     else:
         return HttpResponse(f'Directory {directory} is not found!')
+    
+def home(request):
+    return render(request, 'index.html')

@@ -13,12 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 
-from file_microservice.views import dir_files
+from file_microservice import views
+
 
 urlpatterns = [
+    path('', views.home),
     path('admin/', admin.site.urls),
-    path('api/meta/', dir_files)
-]
+    path('api/meta/', views.dir_files)
+] 
+
