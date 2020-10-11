@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "test-case"
+name = "django_microservice"
 version = "0.1.0"
 description = ""
 authors = ["tsproj"]
