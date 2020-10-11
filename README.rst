@@ -14,4 +14,6 @@ run::
 
 ::api/meta 
 
-   $ localhost:8000/api/meta
+   localhost:8000/api/meta
+   
+Chage directory path in django_microservice/file_microservice/config.py
