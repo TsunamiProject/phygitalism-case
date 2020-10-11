@@ -10,19 +10,20 @@ ENV PYTHONFAULTHANDLER=1 \
     PIP_DEFAULT_TIMEOUT=100 \
     POETRY_VERSION=1.1.2
 
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 WORKDIR /code 
 
 COPY poetry.lock pyproject.toml /code/
 
-RUN python3 -m venv $VIRTUAL_ENV
+COPY django_microservice /code
 
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN python3 -m venv $VIRTUAL_ENV
 
 RUN pip3 install "poetry==$POETRY_VERSION"
 
 RUN poetry install
 
-COPY django_microservice /code
+RUN python3 manage.py migrate
 
 CMD ["python3", "manage.py", "runserver"]
